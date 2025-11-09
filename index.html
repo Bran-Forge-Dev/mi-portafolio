@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portafolio de Proyectos</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="light">
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <div class="header-inner">
+                <div class="logo">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                    <h2>Estudiante de Programación</h2>
+                </div>
+                <nav class="nav-desktop">
+                    <a href="#sobre-mi">Sobre mí</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+                <div class="header-buttons">
+                    <button id="theme-toggle">
+                        <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+                    </button>
+                    <button id="menu-btn" class="menu-btn-mobile">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="mobile-menu">
+                <nav>
+                    <a href="#sobre-mi">Sobre mí</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+        <main>
+            <!-- SOBRE MI -->
+            <section id="sobre-mi" class="sobre-mi">
+                <div class="foto">
+                    <img src="https://i.ibb.co/JRB7ZxLp/user.jpg" alt="Foto del estudiante"/>
+                </div>
+                <div class="texto">
+                    <h2>Sobre Mí</h2>
+                    <p>¡Hola! Soy un apasionado estudiante de desarrollo de software con un fuerte enfoque en crear soluciones eficientes y escalables. Me especializo en el desarrollo web full-stack y siempre estoy buscando aprender nuevas tecnologías y enfrentar desafíos que me permitan crecer profesionalmente. Mi aspiración es contribuir a proyectos innovadores que tengan un impacto positivo en la vida de las personas.</p>
+                </div>
+            </section>
+
+            <!-- PROYECTOS -->
+            <section id="proyectos">
+                <div class="section-header">
+                    <h1>Portafolio de Proyectos</h1>
+                    <p>Una selección de proyectos que demuestran mis habilidades en desarrollo de software.</p>
+                </div>
+                <div class="filter-buttons" id="filter-buttons">
+                    <button class="filter-btn" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+                    <button class="filter-btn" data-filter="Python">Python</button>
+                    <button class="filter-btn" data-filter="Web">Web</button>
+                </div>
+                <div class="project-grid" id="project-grid">
+                    <div class="project-card" data-tags="JavaScript,Web">
+                        <div class="project-img" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1X36h-XKrWS34jNvgojc4vnO2GGyUoBIO1_paZnr7aY2yTVMuZPg_NyXhvp7vh7n9S7dyC0_FJjRPPyqCMWxY-EPlbxEFvc-Xk425t3gEB_OZWbMeMM_K7_PNtcUklhg0UtphIJRZ4zc38vsv3LCJdzo4SIOArME_GCYj_BdsEfNDIt0gUlrQB25iChTgAtaT5u1WGPJZ1jQjC1gh-VJ-GF9-HWnrDHdve9wjo7n82iEzccd_knB8Ra-VCDDRXtbs_dy6zvITv7c");'></div>
+                        <div class="project-content">
+                            <h3>Gestor de Tareas Web</h3>
+                            <p>Una aplicación web para gestionar tareas y proyectos, construida con React y Node.js.</p>
+                            <div class="project-links">
+                                <a href="#">Ver Código</a>
+                                <a href="#">Demo en Vivo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-tags="Python">
+                        <div class="project-img" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFvl9FiipPcOldrGoYINU-A1XgRuYFdYuW27T3Pv8m17OJ0zwbKUKcJdKZ6OX3qhmVQZ_wVJLDHNVn2TEy0Ztx8R8ETq5HDmGo8ra3jyv99ufB3YvCqUrpSf608PX_dmdsYZYhO28xhQ1omvbUs-QP9xPLz5RrB2FFgesJmd13VpLhCy6LA55GyvpqMPdONusryPQBzfY9Hu1LQCz6IW5puGAgG--C_cjydvVNnddcGu0aqy5ADi8JSgMnDQHxCf_QQZV6iedoNvU");'></div>
+                        <div class="project-content">
+                            <h3>E-commerce con Django</h3>
+                            <p>Un e-commerce completo con carrito de compras y pasarela de pago, enfocado en la venta de productos digitales.</p>
+                            <div class="project-links">
+                                <a href="#">Ver Código</a>
+                                <a href="#">Demo en Vivo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-tags="JavaScript,Web">
+                        <div class="project-img" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkJ4oKwFGQpekUIF4y912mi7gVom_ahPWciRWI2ronqHX8TgzCIsH8q1bOStMsVt0XHMtsNAgAug1YgYXmcr5WvG9CP_85UBsSnap5oHFxn1qDCwPXHdieg84jXNUj_WviDXQMdZVdQeXrmumSW-OPnKN1mFwgVpybNqpwIleRVHUbbt_feov2p79ocO8BA0Rf65nD7tRHa5GgNQhhqU09WfWvb-lpXy7sov9ntImHL-9YhK4DJKKvohO8C6pD1XheGx1Xj25PO3c");'></div>
+                        <div class="project-content">
+                            <h3>Blog Personal con JS</h3>
+                            <p>Un blog personal desarrollado desde cero para practicar fundamentos de desarrollo web y diseño responsivo con JavaScript puro.</p>
+                            <div class="project-links">
+                                <a href="#">Ver Código</a>
+                                <a href="#">Demo en Vivo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer id="contacto">
+            <div class="footer-inner">
+                <div class="social-links">
+                    <a href="#"><svg>...</svg></a>
+                    <a href="#"><svg>...</svg></a>
+                </div>
+                <p>© 2024 Estudiante de Programación. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
