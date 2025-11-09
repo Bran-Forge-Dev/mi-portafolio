@@ -130,7 +130,9 @@ body.dark .project-content p { color: #adb5bd; }
     background-color: #007bff;
     transition: background-color 0.3s;
 }
-.project-links a:hover { background-color: #0056b3; }
+.project-links a:hover { background-color: #0056b3; 
+
+}
 
 /* FILTROS */
 .filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
@@ -152,6 +154,7 @@ body.dark .footer-inner .social-links a { color:#adb5bd; }
 /* NAV DESKTOP */
 .nav-desktop { display: flex; }
 
+
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
     .nav-desktop { display: none; } /* ocultar nav en móviles */
@@ -167,4 +170,77 @@ body.dark .footer-inner .social-links a { color:#adb5bd; }
     .sobre-mi { flex-direction: column; align-items: center; text-align: center; }
 }
 
+/* TECNOLOGÍAS */
+.tecnologias {
+    padding: 60px 0;
+    text-align: center;
+}
+.tecnologias .section-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.tecnologias .section-header p {
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+body.dark .tecnologias .section-header p {
+    color: #adb5bd;
+}
 
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.tech-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+.tech-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+body.dark .tech-card {
+    background-color: #1e293b;
+    box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 20px;
+    }
+    .tech-card {
+        width: 80px;
+        height: 80px;
+        padding: 15px;
+    }
+    .tech-card img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ENLACES EN MODO OSCURO */
+body.dark a {
+    color: #66b2ff; /* azul más suave en oscuro */
+}
+body.dark a:hover {
+    color: #99ccff; /* azul más brillante al pasar el mouse */
+}
