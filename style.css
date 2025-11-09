@@ -244,3 +244,32 @@ body.dark a {
 body.dark a:hover {
     color: #99ccff; /* azul más brillante al pasar el mouse */
 }
+
+/* --- SOCIAL ICONS EN FOOTER --- */
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-inner .social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-inner .social-links a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-inner .social-links a:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+}
+
+/* 🌙 Ajuste para modo oscuro */
+body.dark .footer-inner .social-links a img {
+    filter: invert(1) brightness(0.8);
+}
