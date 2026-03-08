@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://*.supabase.co; script-src 'self' https://cdn.jsdelivr.net https://*.supabase.co 'unsafe-inline'; connect-src 'self' https://*.supabase.co https://cdn.jsdelivr.net;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="header">
+      <h1>🧱 Tetris</h1>
+      <div class="score-board">
+        <span class="score-label">Puntos:</span>
+        <span id="score">0</span>
+        <span class="score-label">Nivel:</span>
+        <span id="level">1</span>
+      </div>
+    </header>
+
+    <div class="game-wrapper">
+      <div class="game-area">
+        <canvas id="gameCanvas" width="200" height="400"></canvas>
+        <aside class="sidebar">
+          <div class="next-box">
+            <span class="label">Siguiente</span>
+            <canvas id="nextCanvas" width="80" height="80"></canvas>
+          </div>
+          <div class="lines-box">
+            <span class="label">Líneas</span>
+            <span id="lines">0</span>
+          </div>
+        </aside>
+      </div>
+      <div id="gameOver" class="overlay hidden">
+        <div class="overlay-content">
+          <h2>¡Game Over!</h2>
+          <p>Puntos finales: <span id="finalScore">0</span></p>
+          <button id="restartBtn">Jugar de nuevo</button>
+        </div>
+      </div>
+      <div id="startScreen" class="overlay">
+        <div class="overlay-content">
+          <h2>¡Tetris!</h2>
+          <p>Coloca las piezas y completa líneas para sumar puntos</p>
+          <button id="startBtn">Empezar</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="controls">
+      <p>← → mover · ↑ rotar · ↓ bajar · Espacio soltar</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../../JS/supabase-config.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

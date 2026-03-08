@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://*.supabase.co; script-src 'self' https://cdn.jsdelivr.net https://*.supabase.co 'unsafe-inline'; connect-src 'self' https://*.supabase.co https://cdn.jsdelivr.net;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="header">
+      <h1>🐍 Snake</h1>
+      <div class="score-board">
+        <span class="score-label">Puntos:</span>
+        <span id="score">0</span>
+      </div>
+    </header>
+
+    <div class="game-wrapper">
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+      <div id="gameOver" class="overlay hidden">
+        <div class="overlay-content">
+          <h2>¡Game Over!</h2>
+          <p>Puntos finales: <span id="finalScore">0</span></p>
+          <button id="restartBtn">Jugar de nuevo</button>
+        </div>
+      </div>
+      <div id="startScreen" class="overlay">
+        <div class="overlay-content">
+          <h2>¡Snake!</h2>
+          <p>Usa las flechas del teclado para moverte</p>
+          <button id="startBtn">Empezar</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="controls">
+      <p>↑ ↓ ← → o W A S D</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../../JS/supabase-config.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

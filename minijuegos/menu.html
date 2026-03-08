@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minijuegos | Portafolio</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <style>
+        .minijuegos-page {
+            padding: 40px 20px 60px;
+        }
+        .minijuegos-page .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .minijuegos-page .section-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .game-card {
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        body.dark .game-card {
+            background-color: #1e293b;
+        }
+        .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+        }
+        .game-card-thumb {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        .game-card-body {
+            padding: 20px;
+        }
+        .game-card-body h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+        .game-card-body p {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+        body.dark .game-card-body p {
+            color: #adb5bd;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 30px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        body.dark .back-link {
+            color: #66b2ff;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <div class="header-inner">
+                <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                    <h2>Estudiante de Desarrollo de Software</h2>
+                </a>
+                <nav class="nav-desktop">
+                    <a href="index.html#sobre-mi">Sobre mí</a>
+                    <a href="index.html#proyectos">Proyectos</a>
+                    <a href="menu.html">Minijuegos</a>
+                    <a href="index.html#tecnologias">Habilidades</a>
+                    <a href="index.html#contacto">Contacto</a>
+                </nav>
+                <div class="header-buttons">
+                    <button id="theme-toggle">
+                        <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+                    </button>
+                    <button id="menu-btn" class="menu-btn-mobile">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="mobile-menu">
+                <nav>
+                    <a href="index.html#sobre-mi">Sobre mí</a>
+                    <a href="index.html#proyectos">Proyectos</a>
+                    <a href="minijuegos.html">Minijuegos</a>
+                    <a href="index.html#tecnologias">Habilidades</a>
+                    <a href="index.html#contacto">Contacto</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="minijuegos-page">
+            <a href="../index.html" class="back-link">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Volver al portafolio
+            </a>
+
+            <div class="section-header">
+                <h1>🎮 Minijuegos</h1>
+                <p>Juegos clásicos desarrollados con JavaScript. ¡Elige uno y diviértete!</p>
+            </div>
+
+            <div class="games-grid">
+                <a href="Snake/index.html" class="game-card" target="_blank">
+                    <div class="game-card-thumb">🐍</div>
+                    <div class="game-card-body">
+                        <h3>Snake</h3>
+                        <p>El clásico juego de la serpiente. Come la comida, crece y evita chocar con las paredes o contigo mismo. Usa las flechas o WASD.</p>
+                    </div>
+                </a>
+                <!-- Espacio para más juegos -->
+                 <a href="Tetris/index.html" class="game-card" target="_blank">
+                    <div class="game-card-thumb">🧱</div>
+                    <div class="game-card-body">
+                        <h3>Tetris</h3>
+                        <p>El clásico juego del tetris. Coloca las piezas para completar líneas y evitar que el tablero se llene. Usa las flechas o WASD.</p>
+                    </div>
+                </a>
+            </div>
+        </main>
+
+        <footer id="contacto">
+            <div class="footer-inner">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/brandon-salinas-dev" target="_blank" aria-label="LinkedIn">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+                    </a>
+                    <a href="https://github.com/Bran-Forge-Dev" target="_blank" aria-label="GitHub">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" />
+                    </a>
+                </div>
+                <p>© 2026 Estudiante de Desarrollo de Software. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
