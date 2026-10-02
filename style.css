@@ -388,6 +388,14 @@ html.dark .status-badge {
     background-color: rgba(81, 207, 102, 0.12);
     color: #51cf66;
 }
+.status-badge.thesis {
+    background-color: rgba(102, 126, 234, 0.15);
+    color: #5568d3;
+}
+html.dark .status-badge.thesis {
+    background-color: rgba(102, 126, 234, 0.15);
+    color: #a5b4fc;
+}
 
 /* SECCIÓN MINIJUEGOS */
 .minijuegos-section {
