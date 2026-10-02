@@ -1,10 +1,16 @@
-// Tema claro/oscuro
+// Tema claro/oscuro (la clase 'dark' la aplica un script inline en <head> para evitar flash)
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 
+function syncThemeIcon() {
+    themeIcon.textContent = document.documentElement.classList.contains('dark') ? 'light_mode' : 'dark_mode';
+}
+syncThemeIcon();
+
 themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    themeIcon.textContent = document.body.classList.contains('dark') ? 'light_mode' : 'dark_mode';
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    syncThemeIcon();
 });
 
 // Menú móvil
@@ -13,11 +19,15 @@ const mobileMenu = document.getElementById('mobile-menu');
 
 menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('show');
+    menuBtn.classList.toggle('menu-open');
 });
 
 // Cerrar menú al dar click en link
 mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => mobileMenu.classList.remove('show'));
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('show');
+        menuBtn.classList.remove('menu-open');
+    });
 });
 
 // Filtros de proyectos

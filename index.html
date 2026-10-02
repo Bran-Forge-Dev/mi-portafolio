@@ -3,7 +3,26 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Portafolio de Proyectos web</title>
+    <title>Brandon Zúñiga | Desarrollador Full-Stack</title>
+    <meta name="description" content="Portafolio de Brandon Zúñiga, estudiante de desarrollo de software. Proyectos web funcionales con JavaScript y Python: punto de venta, help desk, gestión de costos y minijuegos."/>
+    <meta name="author" content="Brandon Mizael Zúñiga Salinas"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Brandon Zúñiga | Desarrollador Full-Stack"/>
+    <meta property="og:description" content="Proyectos web funcionales con JavaScript y Python: POS, help desk, gestión de costos y minijuegos."/>
+    <meta property="og:image" content="imagenes/Foto.jpg"/>
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8f9fa"/>
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f172a"/>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme');
+            if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="style.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
@@ -16,7 +35,7 @@
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                     </svg>
-                    <h2>Estudiante de Desarrollo de Software</h2>
+                    <h2>Brandon Zúñiga</h2>
                 </div>
                 <nav class="nav-desktop">
                     <a href="#sobre-mi">Sobre mí</a>
@@ -46,6 +65,18 @@
         </header>
 
         <main>
+            <section class="hero">
+                <p class="hero-greeting">Hola, soy</p>
+                <h1 class="hero-name">Brandon Mizael <span>Zúñiga Salinas</span></h1>
+                <p class="hero-role">Desarrollador Full-Stack</p>
+                <p class="hero-tagline">Estudiante de desarrollo de software. Construyo aplicaciones web funcionales — desde sistemas de punto de venta hasta help desk — con JavaScript, Python y tecnologías modernas.</p>
+                <div class="hero-cta">
+                    <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+                    <a href="CV-Brandon-Zuniga.pdf" class="btn btn-outline" download>Descargar CV</a>
+                    <a href="#contacto" class="btn btn-ghost">Contacto</a>
+                </div>
+            </section>
+
             <section id="sobre-mi" class="sobre-mi">
                 <div class="foto">
                     <img src="imagenes/Foto.jpg" alt="Foto del estudiante"/>
@@ -123,10 +154,7 @@
                         <div class="project-content">
                             <h3>Analizador de Precios - Py-Monitor (Próximo desarrollo)</h3>
                             <p>Herramienta de automatización que extrae y compara precios de insumos en tiempo real de distintos proveedores. Genera reportes inteligentes en Excel para optimizar las compras del negocio.</p>
-                            <div class="project-links">
-                                <a href="#">Ver Código</a>
-                                <a href="#">Demo en Vivo</a>
-                            </div>
+                            <span class="project-badge">En desarrollo · Demo próximamente</span>
                         </div>
                     </div>
 
@@ -159,7 +187,7 @@
                 <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-plain-wordmark.svg" alt=".NET"></div>
                 <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></div>
                 <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"></div>
-                <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg"></div>
+                <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg" alt="SQL Server"></div>
                 <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"></div>
             </div>
         </section>
@@ -174,7 +202,7 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" />
                     </a>
                 </div>
-                <p>© 2026 Estudiante de Desarrollo de Software. Todos los derechos reservados.</p>
+                <p>© 2026 Brandon Zúñiga Salinas. Todos los derechos reservados.</p>
             </div>
         </footer>
 
