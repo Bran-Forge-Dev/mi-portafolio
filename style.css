@@ -189,6 +189,10 @@ html.dark .hero-role { color: #adb5bd; }
     font-size: 1.08rem;
 }
 html.dark .hero-tagline { color: #adb5bd; }
+.hero-compact {
+    padding: 30px 0 40px;
+}
+
 .hero-cta {
     display: flex;
     gap: 14px;
@@ -423,6 +427,18 @@ html.dark .tecnologias .section-header p {
     color: #adb5bd;
 }
 
+.tech-group-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #6c757d;
+    margin: 35px 0 20px;
+}
+html.dark .tech-group-title {
+    color: #adb5bd;
+}
+
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -434,12 +450,14 @@ html.dark .tecnologias .section-header p {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    padding: 20px;
+    padding: 14px 10px;
     width: 100px;
-    height: 100px;
+    min-height: 110px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.4s ease;
 }
 .tech-card:hover {
@@ -447,9 +465,21 @@ html.dark .tecnologias .section-header p {
     box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 .tech-card img {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
+}
+.tech-name {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #6c757d;
+}
+html.dark .tech-name {
+    color: #adb5bd;
+}
+/* El logo de Next.js es negro; invertirlo en modo oscuro */
+html.dark .tech-card img.invert-dark {
+    filter: invert(1);
 }
 html.dark .tech-card {
     background-color: #1e293b;
@@ -464,12 +494,15 @@ html.dark .tech-card {
     }
     .tech-card {
         width: 80px;
-        height: 80px;
-        padding: 15px;
+        min-height: 90px;
+        padding: 10px 6px;
     }
     .tech-card img {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
+    }
+    .tech-name {
+        font-size: 0.62rem;
     }
 }
 
@@ -500,7 +533,14 @@ html.dark a:hover {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.footer-inner .social-links a:hover img {
+.footer-inner .social-links a .material-symbols-outlined {
+    font-size: 32px;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-inner .social-links a:hover img,
+.footer-inner .social-links a:hover .material-symbols-outlined {
     transform: scale(1.1);
     filter: brightness(1.3);
 }
