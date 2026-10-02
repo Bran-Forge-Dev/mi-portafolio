@@ -226,6 +226,31 @@ html.dark .btn-outline { color: #66b2ff; border-color: #66b2ff; }
 html.dark .btn-ghost { color: #adb5bd; }
 html.dark .btn-ghost:hover { color: #99ccff; }
 
+/* ANIMACIONES */
+@keyframes heroIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: none; }
+}
+.hero > * { animation: heroIn 0.7s ease both; }
+.hero-name { animation-delay: 0.05s; }
+.hero-role { animation-delay: 0.12s; }
+.hero-tagline { animation-delay: 0.18s; }
+.hero-cta { animation-delay: 0.25s; }
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .hero > * { animation: none; }
+}
+
 /* En modo oscuro los enlaces se pintan de azul claro; mantener blanco en botones sólidos */
 html.dark .btn-primary,
 html.dark .project-links a,
@@ -235,6 +260,49 @@ html.dark .minijuegos-cta {
 
 /* Offset para anchors bajo el header sticky */
 section[id], footer[id] { scroll-margin-top: 90px; }
+
+/* EDUCACIÓN */
+.educacion {
+    padding: 40px 0;
+}
+.edu-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.4s ease;
+}
+.edu-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+html.dark .edu-card { background-color: #1e293b; }
+.edu-icon {
+    font-size: 40px;
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 12px;
+    padding: 10px;
+}
+.edu-info { flex: 1; min-width: 200px; }
+.edu-info h3 { font-size: 1.15rem; font-weight: 700; }
+.edu-info p { color: #6c757d; margin-top: 4px; }
+html.dark .edu-info p { color: #adb5bd; }
+.edu-status {
+    padding: 8px 16px;
+    border-radius: 9999px;
+    background-color: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+html.dark .edu-status { color: #66b2ff; }
 
 /* SECCIONES */
 .sobre-mi {

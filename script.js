@@ -54,3 +54,23 @@ filterButtons.forEach(btn => {
 
 // Activar 'Todos' al inicio
 document.querySelector('.filter-btn[data-filter="all"]').click();
+
+// Animaciones de aparición al hacer scroll
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealEls = document.querySelectorAll(
+        '.sobre-mi, .edu-card, .section-header, .filter-buttons, .project-card, .tech-card, .game-card, .minijuegos-cta'
+    );
+    revealEls.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = `${(i % 5) * 60}ms`;
+    });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => observer.observe(el));
+}
