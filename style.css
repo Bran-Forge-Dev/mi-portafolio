@@ -372,6 +372,23 @@ html.dark .project-content p { color: #adb5bd; }
 }
 html.dark .project-badge { border-color: #475569; color: #94a3b8; }
 
+/* Badge de estado dentro del título de proyecto */
+.status-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    background-color: rgba(40, 167, 69, 0.15);
+    color: #1e7e34;
+    font-size: 0.7rem;
+    font-weight: 700;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+html.dark .status-badge {
+    background-color: rgba(81, 207, 102, 0.12);
+    color: #51cf66;
+}
+
 /* SECCIÓN MINIJUEGOS */
 .minijuegos-section {
     padding: 60px 0;
